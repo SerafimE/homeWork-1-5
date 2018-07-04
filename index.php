@@ -17,6 +17,8 @@ date_default_timezone_set('Europe/Moscow');
     <h1>Weather and forecasts in <?= $array_weather['name'] . ', ' . $array_weather['sys']['country'] ?></h1>
     <p id="date"><?= date('l j F Y') ?></p>
     <p id="date"><?= date('H:i') ?></p>
+    <p class="condition"><?= 'sunrise: ' . date('H:i', $array_weather['sys']['sunrise']) ?></p>
+    <p class="condition"><?= 'sunset: ' . date('H:i', $array_weather['sys']['sunset']) ?></p>
     <p id="img"><img src="<?= 'http://openweathermap.org/img/w/' . $array_weather['weather'][0]['icon'] . '.png' ?>" alt=""></p>
     <p class="condition"><?= 'temp: ' . $array_weather['main']['temp'] . ' °C' ?></p>
     <p class="condition"><?= 'wind speed: ' . $array_weather['wind']['speed'] . ' m/s'?></p>
