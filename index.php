@@ -7,8 +7,7 @@ date_default_timezone_set('Europe/Moscow');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/style.css" rel="stylesheet">
     <title>Домашнее задание к лекции 1.5</title>
@@ -21,7 +20,7 @@ date_default_timezone_set('Europe/Moscow');
     <p id="img"><img src="<?= 'http://openweathermap.org/img/w/' . $array_weather['weather'][0]['icon'] . '.png' ?>" alt=""></p>
     <p class="condition"><?= 'temp: ' . $array_weather['main']['temp'] . ' °C' ?></p>
     <p class="condition"><?= 'wind speed: ' . $array_weather['wind']['speed'] . ' m/s'?></p>
-    <p class="condition"><?= 'pressure: ' . $array_weather['main']['pressure'] . ' gPa' ?></p>
+    <p class="condition"><?= 'pressure: ' . $array_weather['main']['pressure'] . ' gPa' . '/'  .  round($array_weather['main']['pressure'] * 0.75006375541921) . ' mm'?></p>
     <p id="humidity"><?= 'Humidity: ' . $array_weather['main']['humidity'] . '%' ?></p>
 </div>
 </body>
