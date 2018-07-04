@@ -1,5 +1,5 @@
 <?php
-$weather = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=498817&appid=f3d4855cbacbc20a8845e49073b854df');
+$weather = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=498817&appid=ef275086da6b4c2a604c04dd29f2e5dc');
 $array_weather = json_decode($weather, true);
 date_default_timezone_set('Europe/Moscow');
 ?>
